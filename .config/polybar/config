@@ -1,0 +1,140 @@
+[settings]
+throttle-ms = 50
+throttle-limit = 5
+
+[bar/top]
+monitor = DP-0
+width = 100%
+height = 27
+offset-y = 5
+
+background = #2e3440
+foreground = #f2f2f2
+
+line-size = 2
+line-color = #434c5e
+
+spacing = 1
+padding-right = 2
+module-margin-left = 0
+module-margin-right = 2
+
+font-0 = Overpass:size=8
+font-1 = FontAwesome:size=8
+font-2 = tewi:size=10
+font-3 = SourceHanSansJP:size=10
+
+tray-position = right
+tray-offset-y = -23%
+
+modules-left = i3
+modules-center = xwindow
+modules-right = alsa memory clock
+
+[module/i3]
+type = internal/i3
+
+format = <label-state> <label-mode>
+format-spacing = 0
+strip-wsnumbers = true
+
+label-focused = %name%
+label-focused-padding = 2
+label-focused-margin = 1
+label-focused-font = 3
+label-focused-foreground = #eceff4
+label-focused-background = #5e81ac
+label-focused-overline = #81a1c1
+label-focused-underline = #81a1c1
+
+label-unfocused = %name%
+label-unfocused-padding = 2
+label-unfocused-margin = 1
+label-unfocused-background = #eceff4
+label-unfocused-foreground = #2e3440
+label-unfocused-overline = #d8dee9
+label-unfocused-underline = #d8dee9
+label-unfocused-font = 3
+
+label-urgent = %name%
+label-urgent-padding = 2
+label-urgent-margin = 1
+label-urgent-font = 3
+
+label-visible = %name%
+label-visible-padding = 2
+label-visible-margin = 1
+label-visible-font = 3
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = #bf616a
+label-mode-font = 3
+
+[module/memory]
+type = internal/memory
+
+format = <label> <bar-used>
+format-padding = 2
+format-background = #a3be8c
+format-foreground = #eceff4
+format-underline = #bed1ad
+format-overline = #bed1ad
+
+label = memory
+label-font = 3
+
+bar-used-width = 10
+bar-used-indicator = |
+bar-used-indicator-font = 4
+bar-used-indicator-foreground = #d8e3ce
+bar-used-fill = ─
+bar-used-fill-font = 4
+bar-used-fill-foreground = #d8e3ce
+bar-used-empty = ─
+bar-used-empty-font = 4
+bar-used-empty-foreground = #648349
+
+[module/clock]
+type = internal/date
+date = %%{T3}%Y-%m-%d %I:%M%%{T-}
+
+format-padding = 2
+format-background = #bf616a
+format-foreground = #eceff4
+format-underline = #d39299
+format-overline = #d39299
+
+[module/alsa]
+type = internal/alsa
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+master-mixer = Master
+
+format-volume-padding = 2
+format-volume-background = #ebcb8b
+format-volume-foreground = #4c566a
+format-volume-underline = #f0d8a8
+format-volume-overline = #f0d8a8
+
+format-muted-padding = 2
+format-muted-background = #88c0d0
+format-muted-foreground = #4c566a
+format-muted-underline = #81a1c1
+format-muted-overline = #81a1c1
+
+label-volume = volume %percentage%
+label-volume-font = 3
+label-muted = sound muted
+label-muted-font = 3
+
+[module/xwindow]
+type = internal/xwindow
+label-font = 4
+label-empty = "プロデューサー、一生懸命頑張ってください。"
+label-empty-font = 3
+
+; vim:ft=dosini
