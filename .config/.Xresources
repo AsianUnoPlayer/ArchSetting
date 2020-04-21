@@ -43,4 +43,46 @@ URxvt.font: xft:mononoki:size=14
 ! urxvt*shading: 45
 urxvt*depth: 24
 
+==========================================================
+URxvt.font: xft:mononoki:size=12
 
+! special
+*.foreground:   #c0e0e7
+*.background:   #040607
+*.cursorColor:  #c0e0e7
+
+! black
+*.color0:       #070c0d
+*.color8:       #f1833f
+
+! red
+*.color1:       #11181a
+*.color9:       #beb9ea
+
+! green
+*.color2:       #202a2d
+*.color10:      #a497f4
+
+! yellow
+*.color3:       #354347
+*.color11:      #f3b29a
+
+! blue
+*.color4:       #4f6368
+*.color12:      #f6c3e1
+
+! magenta
+*.color5:       #6e8a90
+*.color13:      #56daa3
+
+! cyan
+*.color6:       #93b7bf
+*.color14:      #f0a485
+
+! white
+*.color7:       #cfe7ed
+*.color15:      #d1d962
+
+! urxvt*transparent: true
+! urxvt*shading: 45
+urxvt*depth: 24
